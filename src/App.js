@@ -1,8 +1,22 @@
 import axios from 'axios';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react'; //imported useState and useEffect
 import './App.css';
-import Character from './components/Character'
-import Info from './components/Info'
+import Character from './components/Character' //imported Character
+import Info from './components/Info' //imported Info
+import styled from 'styled-components' //imported styled components
+
+const StyledApp = styled.div`
+  text-align: center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  color: ${props => props.theme.white};
+
+  h1{
+    color: ${props => props.theme.white};
+    text-shadow: 2px 1px 5px dimgray;
+  }
+`
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -36,7 +50,7 @@ const App = () => {
   console.log('characters:', characters)
 
   return (
-    <div className="App">
+    <StyledApp>
       <h1 className="Header">Characters</h1>
       {
         characters.map((character) => {
@@ -47,7 +61,7 @@ const App = () => {
       {
         currentCharacter && <Info characterId={currentCharacter.url} close={closeInfo}/>
       }
-    </div>
+    </StyledApp>
   );
 }
 
