@@ -12,6 +12,9 @@ const App = () => {
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
+  const openInfo = (id) => {
+    setCurrentCharacter(id)
+  }
 
   useEffect(() => {
     axios
@@ -30,7 +33,7 @@ const App = () => {
       <h1 className="Header">Characters</h1>
       {
         characters.map((character) => {
-          return <Character key={character.id} character={character} />
+          return <Character key={character.id} character={character} open={openInfo} />
         })
       }
     </div>

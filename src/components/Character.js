@@ -2,10 +2,11 @@
 import React from 'react'
 
 export default function Character(props) {
-    const {character} = props
+    const {character, open} = props
     return (
         <div>
-            {character.name}            
+            {character.name}
+            <button onClick={open}>Character Info</button>            
         </div>
     )
 }
