@@ -9,16 +9,20 @@ const App = () => {
   const [characters, setCharacters] = useState([])
   const [currentCharacter, setCurrentCharacter] = useState(null)
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
-  const openInfo = (id) => {
+  //Create a few functions to open and close details when the buttons are clicked
+
+  const openInfo = id => {
     setCurrentCharacter(id)
   }
 
   const closeInfo = () => {
     setCurrentCharacter(null)
   }
+
+  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
+  // side effect in a component, you want to think about which state and/or props it should
+  // sync up with, if any.
+
   useEffect(() => {
     axios
     .get(`https://swapi.dev/api/people`)
@@ -30,8 +34,6 @@ const App = () => {
     })
   },[])
   console.log('characters:', characters)
-
-  console.log(`characters:`, characters)
 
   return (
     <div className="App">

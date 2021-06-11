@@ -1,8 +1,7 @@
 // Write your Character component here
 import React from 'react'
 
-export default function Character(props) {
-    const {character, open} = props
+export default function Character({character, open}) {
     return (
         <div>
             {character.name}
