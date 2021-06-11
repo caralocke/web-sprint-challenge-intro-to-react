@@ -1,8 +1,9 @@
 // Write your Character component here
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components' //imported styled components
 
-const StyledCharacter = styled.div`
+//styling for the div that contains my character name and the button to open their info
+const StyledCharacter = styled.div` 
     width:65%;
     display:flex;
     justify-content: space-between;
@@ -24,17 +25,14 @@ const StyledCharacter = styled.div`
         transition: all 0.4s ease-in-out;
         background-color: ${props => props.theme.secondaryColor}
     }
-
+    //styling for the button itself
     button {
         font-weight: bold;
         text-shadow: 1px 1px 5px ${props => props.theme.white};
         &:hover{
             background-color: ${props => props.theme.tertiaryColor};
             color: ${props => props.theme.white};
-            font-weight:normal;
-            text-decoration: ${props => props.theme.white} wavy underline;
-            -webkit-text-stroke-width: .5px;
-            -webkit-text-stroke-color: ${props => props.theme.black};
+            text-decoration: ${props => props.theme.white} underline;
             transform: scale(1.1);
         }
     }

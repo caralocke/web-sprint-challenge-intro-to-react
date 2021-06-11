@@ -5,6 +5,7 @@ import Character from './components/Character' //imported Character
 import Info from './components/Info' //imported Info
 import styled from 'styled-components' //imported styled components
 
+//styling for the app component itself
 const StyledApp = styled.div`
   text-align: center;
   display:flex;
