@@ -16,6 +16,11 @@ const StyledApp = styled.div`
   h1{
     color: ${props => props.theme.white};
     text-shadow: 2px 1px 5px dimgray;
+
+    &:hover{
+      color: ${props => props.theme.black};
+      text-shadow: 2px 1px 5px ${props => props.theme.white}
+    }
   }
 `
 const App = () => {

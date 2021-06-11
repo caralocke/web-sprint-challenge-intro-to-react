@@ -22,7 +22,7 @@ const StyledCharacter = styled.div`
     color: ${props => props.theme.white};
     border: 1px solid ${props => props.theme.white};
     border-radius: 10px;
-    font-weight:bolder;
+    font-weight:bold;
     background-color: ${props => props.theme.primaryColor};
     text-shadow: 1px 1px 5px ${props => props.theme.black};
 
@@ -35,7 +35,11 @@ const StyledCharacter = styled.div`
     transition: all 0.4s ease-in-out;
     &:hover {
         transition: all 0.4s ease-in-out;
-        background-color: ${props => props.theme.secondaryColor}
+        background-color: ${props => props.theme.secondaryColor};
+        color: ${props => props.theme.black};
+        border: 1px solid ${props => props.theme.black};
+        font-weight: bolder;
+        text-shadow: 1px 1px 5px ${props => props.theme.white};
     }
     //styling for the button itself
     button {
