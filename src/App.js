@@ -16,6 +16,9 @@ const App = () => {
     setCurrentCharacter(id)
   }
 
+  const closeInfo = () => {
+    setCurrentCharacter(null)
+  }
   useEffect(() => {
     axios
     .get(`https://swapi.dev/api/people`)
@@ -26,6 +29,7 @@ const App = () => {
       console.log(`Here's where you messed up:\n`, err)
     })
   },[])
+  console.log('characters:', characters)
 
   console.log(`characters:`, characters)
 
@@ -34,12 +38,12 @@ const App = () => {
       <h1 className="Header">Characters</h1>
       {
         characters.map((character) => {
-          return <Character key={character.id} character={character} open={openInfo} />
+          return <Character key={character.id} character={character} open={openInfo}/>
         })
       }
 
       {
-        currentCharacter && <Info characterId={currentCharacter.url}/>
+        currentCharacter && <Info characterId={currentCharacter.url} close={closeInfo}/>
       }
     </div>
   );
