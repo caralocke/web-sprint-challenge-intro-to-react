@@ -1,6 +1,16 @@
 // Write your Character component here
 import React from 'react'
-import styled from 'styled-components' //imported styled components
+import styled, { keyframes} from 'styled-components' //imported styled components and keyframes
+
+const kf = keyframes`
+    50%{
+        transform: scale(0.8)
+    }
+    100%{
+        opacity:1;
+        transform: scale(1)
+    }
+`
 
 //styling for the div that contains my character name and the button to open their info
 const StyledCharacter = styled.div` 
@@ -19,6 +29,8 @@ const StyledCharacter = styled.div`
     @media ${props => props.theme.breakpointMobile} {
         width:95%;
     }
+
+    animation: ${kf} 0.4s ease-in-out forwards;
 
     transition: all 0.4s ease-in-out;
     &:hover {

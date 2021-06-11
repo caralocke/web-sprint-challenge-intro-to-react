@@ -1,7 +1,24 @@
 import axios from 'axios' //imported axios
 import React, {useState, useEffect} from 'react' //imported React, useState, and useEffect
-import styled from 'styled-components' //imported styled components
+import styled, { keyframes } from 'styled-components' //imported styled components and keyframes
 
+const rotateOpen = keyframes`
+    from{
+        transform: rotate(180deg)
+    }
+
+    to{
+        transform: rotate(360deg)
+    }
+`
+const rotateClose = keyframes`
+    from{
+        transform: rotate(360deg)
+    }
+    to{
+        transform: rotate(180deg)
+    }
+`
 // styling for the info component that shows up when the 'Character Info' button is clicked
 const StyledInfo = styled.div`
     width: 67%;
@@ -17,6 +34,8 @@ const StyledInfo = styled.div`
     @media ${props => props.theme.breakpointMobile} {
         width:96.5%;
     }
+
+    animation: ${rotateOpen} 0.7s linear;
 
     transition: all 0.4s ease-in-out;
     &:hover{
