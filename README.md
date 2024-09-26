@@ -12,11 +12,11 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
-- [ ] Open the assignment in Canvas and click on the "Set up git" option.
-- [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [x] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [x] Open the assignment in Canvas and click on the "Set up git" option.
+- [x] Follow instructions to set up Codegrade's Webhook and Deploy Key.
+- [x] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
+- [x] Check to see that Codegrade has accepted your git submission.
 
 For a step-by-step on setting up Codegrade see [this guide.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
 
@@ -36,9 +36,9 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
-- [ ] Set the list of characters into state.
-- [ ] Render your characters to the DOM:
+- [x] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
+- [x] Set the list of characters into state.
+- [x] Render your characters to the DOM:
 
   1. Build a React component named 'Character' to render an individual character.
   1. Map over the list in state, and for each character render a Character to the page.
@@ -69,18 +69,22 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes.
-- [ ] Create a pull request to merge `<firstName-lastName>` branch into `main`.
-- [ ] Please don't merge your own pull request and make sure **you are on your own repo**.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
+- [x] Submit via Codegrade by committing and pushing any new changes.
+- [x] Create a pull request to merge `<firstName-lastName>` branch into `main`.
+- [x] Please don't merge your own pull request and make sure **you are on your own repo**.
+- [x] Check Codegrade for automated feedback.
+- [x] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
+- [x] Any changes pushed after the deadline will not receive any feedback.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+A) With React JS, we can use reusable components and keep track of state to update information when it changes. I found it easier to keep track of what I am doing with React (vs Vanilla JS) because of the way we break the page down into components, and working with things from there.
 1. Describe component state.
+A) State is used to manage data and can be modified with the 'setState()' method. State can be updated many times, depending on what it's being used for, but cannot be accessed from outside its own component.
 1. Describe props.
+A) Props are pieces of information that we can pass from parent to child that act as arguments when passed into a child component. 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+A) Side effects are something that happens as a result of something else. In react, you sync effects based on what is (or isn't) in the dependency array of useEffect. If there is something in the dependency array, useEffect will will re-run when that 'something' changes(example of 'Component Did Update'). If there isn't anything in the dependency array, it will update every time the component re-renders (example of 'Component Did Mount').
